@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ShortLinkController@index');
+
+Route::post('/create-link', 'ShortLinkController@store')->name('link.create');
+
+Route::get('/404', function () {
+    return view('404');
+})->name('not-found');
+
+Route::get('/{token?}', 'ShortLinkController@redirect');

@@ -158,6 +158,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'link' => 'Link',
+        'limit' => 'Limit',
+        'lifetime' => 'Link lifetime',
+    ],
 
 ];
